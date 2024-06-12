@@ -1,0 +1,11 @@
+spring:
+    application:
+        name: graalvmdemo
+
+springdoc:
+    default-produces-media-type: application/json
+
+server:
+    servlet:
+        context-path: /api/v1
+    port: 8081
