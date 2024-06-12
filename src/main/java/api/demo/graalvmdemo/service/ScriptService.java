@@ -116,6 +116,10 @@ public class ScriptService {
                 || script.getStatus().equals(ScriptStatus.FAILED))) {
             script.setStatus(ScriptStatus.STOPPED);
             scriptsStorage.put(scriptId, script);
+        } else {
+            throw new RuntimeException(
+                    String.format("Script: %d cannot be stopped. Script should be active or scheduled", scriptId)
+            );
         }
     }
 
